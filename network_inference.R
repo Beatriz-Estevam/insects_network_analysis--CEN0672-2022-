@@ -26,7 +26,7 @@ nodes <- data.frame(id = 1:nrow(df2),
 
 # Create an edges dataframe from the significant pairwise co-occurrences.
 edges <- data.frame(from = co$sp1, to = co$sp2,
-                    color = ifelse(co$p_lt <= 0.50, '#B0B2C1', '#3C3F51'),
+                    color = ifelse(co$p_lt <= 0.05, '#B0B2C1', '#3C3F51'),
                     dashes = ifelse(co$p_lt <= 0.01, TRUE, FALSE))
 
 
